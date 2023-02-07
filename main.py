@@ -1,6 +1,5 @@
 suits = ['spades', 'clubs', 'hearts', 'diamonds']
-suit = suits[2]
-rank = 'K'
+rank = ['Ace', 'King', 'Queen', 'Jack', '10', '9', '8', '7', '6', '5', '4', '3', '2']
 value = 10
 
 
