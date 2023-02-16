@@ -1,8 +1,8 @@
 import random
-from cards import Card
-from decks import Deck
-from hands import Hand
-# from games import Game
+from card import Card
+from deck import Deck
+from hand import Hand
+# from game import Game
 
 
 class Card:
@@ -70,7 +70,7 @@ class Hand:
                 has_ace = True
 
         if has_ace and self.value > 21:
-        # this condition automatically assumes the value is True based on line 68
+        # this condition automatically assumes the value is True based on previous line
             self.value -= 10
 
     def get_value(self):
@@ -92,9 +92,11 @@ class Hand:
             print('Value : ', self.get_value())
 
 
-deck = Deck()
-deck.shuffle()
+class Game:
+    def play(self):
+        game_number == 0
+        games_to_play == 0
+        games_to_play = int(input('How many games do you want to play? '))
 
-hand = Hand()
-hand.add_card(deck.deal(2))
-hand.display
+g = Game()
+g.play()
