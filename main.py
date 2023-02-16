@@ -1,7 +1,7 @@
 import random
-# from cards import Card
-# from decks import Deck
-# from hands import Hand
+from cards import Card
+from decks import Deck
+from hands import Hand
 # from games import Game
 
 
@@ -10,7 +10,7 @@ class Card:
         self.suit = suit
         self.rank = rank
     def __str__(self):
-        return f"{self.rank['rank']} or {self.suit}"
+        return f"{self.rank['rank']} of {self.suit}"
 
 
 
@@ -35,7 +35,7 @@ class Deck:
         ]
         for suit in suits:
             for rank in ranks:
-                self.cards.append(Card[suit, rank])
+                self.cards.append(Card(suit, rank))
 
     def shuffle(self):
         if len(self.cards) > 1:
@@ -47,8 +47,7 @@ class Deck:
             if len(self.cards) > 0:
                 card = self.cards.pop()
                 cards_dealt.append(card)
-            return cards_dealt
-        
+        return cards_dealt
 
 
 class Hand:
@@ -93,11 +92,9 @@ class Hand:
             print('Value : ', self.get_value())
 
 
-
-
 deck = Deck()
 deck.shuffle()
 
 hand = Hand()
-hand.add_card(deck.deal(4))
-hand.display()
+hand.add_card(deck.deal(2))
+hand.display
